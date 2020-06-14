@@ -1,14 +1,11 @@
 import React from 'react';
-import cn from 'classnames';
 
-import styles from './styles.module.scss';
+import Routes from '../Routes';
+
+import '../../styles/application.scss';
 
 function App() {
-  return (
-    <div className={cn('column center', styles.container)}>
-      <span className={styles.title}>Hola</span>
-    </div>
-  );
+  return <Routes />;
 }
 
 export default App;
