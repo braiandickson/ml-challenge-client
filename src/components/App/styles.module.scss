@@ -1,7 +1,9 @@
+@import '../../styles/variables/colors';
+
 .container {
-  text-align: center;
+  height: 100vh;
 }
 
 .title {
-  color: red;
+  color: $blue;
 }
