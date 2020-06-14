@@ -9,8 +9,7 @@
 }
 
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background-color: $grey;
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: -1px;
 }
