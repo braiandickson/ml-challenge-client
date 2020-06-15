@@ -8,9 +8,18 @@
     max-width: 1200px;
   }
 
+  &__button {
+    background-color: $yellow;
+    cursor: pointer;
+    margin-right: 60px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
   &__logo {
     height: 34px;
-    margin-right: 60px;
     width: 134px;
   }
 }

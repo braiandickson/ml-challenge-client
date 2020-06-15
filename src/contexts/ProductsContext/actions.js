@@ -1,6 +1,9 @@
 import { getProducts, getProductDetail } from '../../services/ProductsService';
 
-import { mockedResults } from '../../screens/Results/mockedResults';
+import {
+  mockedResults,
+  mockedProduct,
+} from '../../screens/Results/mockedResults';
 
 const ActionTypes = {
   GET_PRODUCTS: 'GET_PRODUCTS',
@@ -33,9 +36,10 @@ export const actionCreators = {
   getProductDetail: async (id) => {
     const response = await getProductDetail(id);
     if (response) {
+      // TODO: QUITAR LA DATA MOCKEADA;
       return {
         type: ActionTypes.GET_PRODUCT_DETAIL,
-        payload: response.data,
+        payload: response.data || mockedProduct.items,
       };
     } else {
       return response.error;
