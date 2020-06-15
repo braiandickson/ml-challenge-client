@@ -2,23 +2,26 @@ import { getProducts, getProductDetail } from '../../services/ProductsService';
 
 const ActionTypes = {
   GET_PRODUCTS: 'GET_PRODUCTS',
+  SET_PRODUCTS: 'SET_PRODUCTS',
   RESET_PRODUCTS: 'RESET_PRODUCTS',
   GET_PRODUCT_DETAIL: 'GET_PRODUCT_DETAIL',
   RESET_PRODUCT_DETAIL: 'RESET_PRODUCT_DETAIL',
 };
 
 export const actionCreators = {
-  getProducts: async (query) => {
+  getProducts: async (query, dispatch) => {
     const response = await getProducts(query);
+    debugger;
     if (response) {
-      return {
-        type: ActionTypes.GET_PRODUCTS,
-        payload: response.data,
-      };
+      dispatch(actionCreators.setProducts(response.data));
     } else {
       return response.error;
     }
   },
+  setProducts: (products) => ({
+    type: ActionTypes.SET_PRODUCTS,
+    payload: products,
+  }),
   resetProducts: () => ({
     type: ActionTypes.RESET_PRODUCTS,
   }),

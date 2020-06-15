@@ -1,0 +1,16 @@
+@import '../../styles/variables/colors';
+
+.header {
+  background-color: $yellow;
+  height: 60px;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.logo {
+  height: 34px;
+  margin-right: 60px;
+  width: 134px;
+}

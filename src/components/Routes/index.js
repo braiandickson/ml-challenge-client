@@ -1,6 +1,7 @@
 import React, { lazy } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+import Header from '../Header';
 import Suspense from '../Suspense';
 import PATHS from './paths';
 import styles from './styles.module.scss';
@@ -13,6 +14,7 @@ function Routes() {
   return (
     <Router>
       <div className={styles.container}>
+        <Header />
         <Suspense>
           <Switch>
             <Route path={PATHS.results} component={Results} exact />
