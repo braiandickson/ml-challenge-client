@@ -15,10 +15,19 @@ const Header = () => {
     dispatch(actionCreators.getProducts(query, dispatch));
     history.push(`${PATHS.results}?search=${query}`);
   };
+
+  const handleClickLogo = () => history.push(PATHS.home);
+
   return (
     <div className="row center full-width header">
       <div className="row middle space-between header__container">
-        <img src={logo} alt="logo" className="header__logo" />
+        <button
+          onClick={handleClickLogo}
+          className="header__button"
+          type="button"
+        >
+          <img src={logo} alt="logo" className="header__logo" />
+        </button>
         <SearchBar handleSearch={handleSearch} />
       </div>
     </div>

@@ -1,0 +1,71 @@
+@import '../../styles/variables/colors';
+
+.product {
+  background-color: $white;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  max-width: 850px;
+  margin: 20px 0;
+  padding: 30px;
+
+  &__header {
+    margin-bottom: 50px;
+  }
+
+  &__picture {
+    margin-right: 30px;
+    flex: 1;
+    height: 470px;
+    width: 470px;
+  }
+
+  &__price-container {
+    max-width: 240px;
+  }
+
+  &__status {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  &__price {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  &__currency {
+    margin-right: 5px;
+  }
+
+  &__amount {
+    margin-right: 5px;
+  }
+
+  &__decimals {
+    font-size: 24px;
+    padding-top: 5px;
+  }
+
+  &__button {
+    color: $white;
+    background-color: $blue;
+    border-radius: 4px;
+    font-size: 16px;
+    height: 46px;
+  }
+
+  &__description-title {
+    margin-bottom: 30px;
+  }
+
+  &__description {
+    font-size: 18px;
+    color: #666;
+    white-space: pre-line;
+  }
+}
