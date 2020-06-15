@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from '../Header';
 import Suspense from '../Suspense';
 import PATHS from './paths';
-import styles from './styles.module.scss';
 
 const Home = lazy(() => import('../../screens/Home'));
 const Results = lazy(() => import('../../screens/Results'));
@@ -13,7 +12,7 @@ const ProductDetail = lazy(() => import('../../screens/ProductDetail'));
 function Routes() {
   return (
     <Router>
-      <div className={styles.container}>
+      <div className="column center routes">
         <Header />
         <Suspense>
           <Switch>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import cn from 'classnames';
 
 import { useDispatch } from '../../contexts/ProductsContext';
 import { actionCreators } from '../../contexts/ProductsContext/actions';
@@ -9,19 +8,17 @@ import PATHS from '../Routes/paths';
 
 import SearchBar from '../SearchBar';
 
-import styles from './styles.module.scss';
-
 const Header = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const handleSearch = (query) => {
     dispatch(actionCreators.getProducts(query, dispatch));
-    history.push(PATHS.results);
+    history.push(`${PATHS.results}?search=${query}`);
   };
   return (
-    <div className={cn('row center full-width', styles.header)}>
-      <div className={cn('row middle space-between', styles.container)}>
-        <img src={logo} alt="logo" className={styles.logo} />
+    <div className="row center full-width header">
+      <div className="row middle space-between header__container">
+        <img src={logo} alt="logo" className="header__logo" />
         <SearchBar handleSearch={handleSearch} />
       </div>
     </div>
