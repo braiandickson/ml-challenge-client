@@ -1,0 +1,43 @@
+@import '../../styles/variables/colors';
+
+.product-item {
+  background-color: $white;
+  border-bottom: 1px solid $light-grey;
+  height: 220px;
+  padding: 24px;
+  width: 790px;
+
+  &__picture {
+    height: 160px;
+    margin-right: 24px;
+    width: 160px;
+  }
+
+  &__information {
+    height: 100%;
+    width: 100%;
+  }
+
+  &__price-container {
+    margin-bottom: 10px;
+    padding: 10px 0;
+  }
+
+  &__price {
+    color: $dark-grey;
+    font-size: 22px;
+  }
+
+  &__status {
+    background-color: $green;
+    border-radius: 25px;
+    height: 15px;
+    margin-left: 10px;
+    width: 15px;
+  }
+
+  &__title {
+    color: $dark-grey;
+    font-size: 18px;
+  }
+}

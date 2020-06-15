@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
-import cn from 'classnames';
 
 import searchIcon from './assets/searchIcon.svg';
-
-import styles from './styles.module.scss';
 
 const SearchBar = ({ handleSearch }) => {
   const [query, setQuery] = useState('');
@@ -21,18 +18,15 @@ const SearchBar = ({ handleSearch }) => {
   };
 
   return (
-    <form
-      className={cn('row middle full-width', styles.container)}
-      onSubmit={handleSubmit}
-    >
+    <form className="row middle full-width searchbar" onSubmit={handleSubmit}>
       <input
         name="query"
         type="text"
-        className={styles.input}
+        className="searchbar__input"
         onChange={handleChange}
       />
-      <button type="submit" className={styles.button}>
-        <img className={styles.icon} src={searchIcon} alt="search-icon" />
+      <button type="submit" className="searchbar__button">
+        <img className="searchbar__icon" src={searchIcon} alt="search-icon" />
       </button>
     </form>
   );

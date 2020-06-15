@@ -1,4 +1,5 @@
 export const INITIAL_STATE = {
+  categories: [],
   products: [],
   productId: null,
   product: {},

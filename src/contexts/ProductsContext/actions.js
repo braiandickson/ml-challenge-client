@@ -1,5 +1,7 @@
 import { getProducts, getProductDetail } from '../../services/ProductsService';
 
+import { mockedResults } from '../../screens/Results/mockedResults';
+
 const ActionTypes = {
   GET_PRODUCTS: 'GET_PRODUCTS',
   SET_PRODUCTS: 'SET_PRODUCTS',
@@ -9,11 +11,14 @@ const ActionTypes = {
 };
 
 export const actionCreators = {
+  // TODO: CAMBIAR EL NOMBRE DEL ACTION A GET_RESULTS;
   getProducts: async (query, dispatch) => {
     const response = await getProducts(query);
-    debugger;
     if (response) {
-      dispatch(actionCreators.setProducts(response.data));
+      // TODO: QUITAR LA DATA MOCKEADA;
+      dispatch(
+        actionCreators.setProducts(response.data || mockedResults.items)
+      );
     } else {
       return response.error;
     }
