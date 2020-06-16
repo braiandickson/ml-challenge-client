@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 import { useSelector, useDispatch } from '../../contexts/ProductsContext';
 import { actionCreators } from '../../contexts/ProductsContext/actions';
@@ -35,6 +36,10 @@ const ProductDetail = () => {
     <Loader />
   ) : (
     <div className="column product__container">
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+      </Helmet>
       <Categories categories={categories} />
       <div className="column full-width product">
         <div className="row full-width product__header">

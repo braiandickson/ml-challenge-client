@@ -1,4 +1,5 @@
 import React, { useReducer } from 'react';
+import { Helmet } from 'react-helmet';
 
 import Routes from '../Routes';
 import { Context as ProductsContext } from '../../contexts/ProductsContext';
@@ -18,6 +19,11 @@ function App() {
     <ProductsContext.Provider
       value={{ state: productsState, dispatch: userDispatch }}
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>ML Challenge</title>
+        <link rel="canonical" href="http://localhost:3000" />
+      </Helmet>
       <Routes />
     </ProductsContext.Provider>
   );
