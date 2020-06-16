@@ -20,6 +20,7 @@ export const actionCreators = {
       dispatch(actionCreators.setProducts(response.data));
       dispatch(actionCreators.setLoader(LoaderIds.productsLoader, false));
     } else {
+      dispatch(actionCreators.setLoader(LoaderIds.productsLoader, false));
       return response.error;
     }
   },
@@ -38,6 +39,7 @@ export const actionCreators = {
       dispatch(actionCreators.setProductDetail(response.data));
       dispatch(actionCreators.setLoader(LoaderIds.productLoader, false));
     } else {
+      dispatch(actionCreators.setLoader(LoaderIds.productLoader, false));
       return response.error;
     }
   },

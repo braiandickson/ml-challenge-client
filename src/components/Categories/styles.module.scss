@@ -1,0 +1,20 @@
+@import '../../styles/variables/colors';
+
+.categories {
+  max-width: 850px;
+  margin-bottom: 20px;
+}
+
+.categorie {
+  margin-right: 10px;
+
+  &__chevron {
+    fill: $dark-grey;
+    margin-right: 10px;
+  }
+
+  &__name {
+    color: $dark-grey;
+    font-size: 14px;
+  }
+}
