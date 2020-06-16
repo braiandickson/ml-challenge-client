@@ -1,2 +1,2 @@
-export const COLOR_SPINNER = '#000';
+export const COLOR_SPINNER = '#red';
 export const SPINNER_DEFAULT = 'three-bounce';

@@ -3,15 +3,10 @@ import Spinner from 'react-spinkit';
 
 import { COLOR_SPINNER, SPINNER_DEFAULT } from './constants';
 
-function Loading({
-  className = '',
-  name = SPINNER_DEFAULT,
-  color = COLOR_SPINNER,
-  ...rest
-}) {
+function Loading({ name = SPINNER_DEFAULT, color = COLOR_SPINNER, ...rest }) {
   return (
     <Spinner
-      className={className}
+      className="row middle spinner"
       name={name}
       color={color}
       fadeIn="half"

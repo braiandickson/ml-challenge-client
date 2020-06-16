@@ -6,11 +6,13 @@ import { actionCreators } from '../../contexts/ProductsContext/actions';
 
 import PATHS from '../../components/Routes/paths';
 import ProductList from '../../components/ProductList';
+import Loader from '../../components/Spinner/components/loading';
 
 const Results = () => {
   const dispatch = useDispatch();
   const history = useHistory();
-  const products = useSelector((state) => state.products);
+  const { products, productsLoader } = useSelector((state) => state);
+
   const query = new URLSearchParams(useLocation().search).get('search');
 
   useEffect(() => {
@@ -21,7 +23,9 @@ const Results = () => {
     }
   }, [dispatch, history, products.length, query]);
 
-  return (
+  return productsLoader ? (
+    <Loader />
+  ) : (
     <div className="column center full-width results">
       {products && <ProductList products={products} />}
     </div>

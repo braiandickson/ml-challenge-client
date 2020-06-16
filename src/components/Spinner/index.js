@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { getDisplayName } from '~utils/displayName';
+import { getDisplayName } from '../../utils/displayName';
 
 import Loading from './components/loading';
 

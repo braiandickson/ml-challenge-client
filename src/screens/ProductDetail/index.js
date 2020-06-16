@@ -4,10 +4,11 @@ import { useHistory, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from '../../contexts/ProductsContext';
 import { actionCreators } from '../../contexts/ProductsContext/actions';
 import PATHS from '../../components/Routes/paths';
+import Loader from '../../components/Spinner/components/loading';
 
 const ProductDetail = () => {
-  const product = useSelector((state) => state.product);
-  console.log(product);
+  const { product, productLoader } = useSelector((state) => state);
+
   const history = useHistory();
   const { id } = useParams();
   const {
@@ -18,6 +19,7 @@ const ProductDetail = () => {
     sold_quantity: soldCuantity,
     description,
   } = product;
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -28,7 +30,9 @@ const ProductDetail = () => {
     }
   }, [dispatch, history, id]);
 
-  return (
+  return productLoader ? (
+    <Loader />
+  ) : (
     <div className="column full-width product">
       <div className="row full-width product__header">
         <img className="product__picture" src={picture} alt={title} />
