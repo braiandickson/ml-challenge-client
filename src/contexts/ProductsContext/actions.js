@@ -1,27 +1,20 @@
 import { getProducts, getProductDetail } from '../../services/ProductsService';
 
-import {
-  mockedResults,
-  mockedProduct,
-} from '../../screens/Results/mockedResults';
-
 const ActionTypes = {
   GET_PRODUCTS: 'GET_PRODUCTS',
   SET_PRODUCTS: 'SET_PRODUCTS',
   RESET_PRODUCTS: 'RESET_PRODUCTS',
   GET_PRODUCT_DETAIL: 'GET_PRODUCT_DETAIL',
+  SET_PRODUCT_DETAIL: 'SET_PRODUCT_DETAIL',
   RESET_PRODUCT_DETAIL: 'RESET_PRODUCT_DETAIL',
 };
 
 export const actionCreators = {
-  // TODO: CAMBIAR EL NOMBRE DEL ACTION A GET_RESULTS;
   getProducts: async (query, dispatch) => {
+    dispatch(actionCreators.resetProducts());
     const response = await getProducts(query);
-    if (response) {
-      // TODO: QUITAR LA DATA MOCKEADA;
-      dispatch(
-        actionCreators.setProducts(response.data || mockedResults.items)
-      );
+    if (response.data) {
+      dispatch(actionCreators.setProducts(response.data));
     } else {
       return response.error;
     }
@@ -33,18 +26,19 @@ export const actionCreators = {
   resetProducts: () => ({
     type: ActionTypes.RESET_PRODUCTS,
   }),
-  getProductDetail: async (id) => {
+  getProductDetail: async (id, dispatch) => {
+    dispatch(actionCreators.resetProductDetail());
     const response = await getProductDetail(id);
-    if (response) {
-      // TODO: QUITAR LA DATA MOCKEADA;
-      return {
-        type: ActionTypes.GET_PRODUCT_DETAIL,
-        payload: response.data || mockedProduct.items,
-      };
+    if (response.data) {
+      dispatch(actionCreators.setProductDetail(response.data));
     } else {
       return response.error;
     }
   },
+  setProductDetail: (product) => ({
+    type: ActionTypes.SET_PRODUCT_DETAIL,
+    payload: product,
+  }),
   resetProductDetail: () => ({
     type: ActionTypes.RESET_PRODUCT_DETAIL,
   }),

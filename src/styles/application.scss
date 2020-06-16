@@ -1,6 +1,7 @@
 @import './variables/colors';
 @import './variables/display';
 @import './variables/dimensions';
+@import './variables/fonts';
 
 // Screens
 @import '../screens/Home/styles.module.scss';
@@ -22,8 +23,8 @@
 
 body {
   background-color: $grey;
-  font-family: Arial, Helvetica, sans-serif;
-  letter-spacing: 0px;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
 }
 
 a {

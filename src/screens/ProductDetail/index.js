@@ -3,11 +3,11 @@ import { useHistory, useParams } from 'react-router-dom';
 
 import { useSelector, useDispatch } from '../../contexts/ProductsContext';
 import { actionCreators } from '../../contexts/ProductsContext/actions';
-import { mockedProduct } from '../../screens/Results/mockedResults';
 import PATHS from '../../components/Routes/paths';
 
 const ProductDetail = () => {
   const product = useSelector((state) => state.product);
+  console.log(product);
   const history = useHistory();
   const { id } = useParams();
   const {
@@ -17,17 +17,16 @@ const ProductDetail = () => {
     condition,
     sold_quantity: soldCuantity,
     description,
-  } = mockedProduct.item;
-  const { currency, amount, decimals } = price;
+  } = product;
   const dispatch = useDispatch();
 
   useEffect(() => {
     if (!id) {
       history.push(PATHS.home);
-    } else if (!product.item && id) {
+    } else {
       dispatch(actionCreators.getProductDetail(id, dispatch));
     }
-  }, [dispatch, history, id, product]);
+  }, [dispatch, history, id]);
 
   return (
     <div className="column full-width product">
@@ -37,9 +36,11 @@ const ProductDetail = () => {
           <span className="product__status">{`${condition} - ${soldCuantity} vendidos`}</span>
           <h1 className="product__title">{title}</h1>
           <div className="row product__price">
-            <h2 className="product__currency">{currency}</h2>
-            <h2 className="product__amount">{amount}</h2>
-            <h2 className="product__decimals">{decimals}</h2>
+            {price && <h2 className="product__currency">{price.currency}</h2>}
+            {price && <h2 className="product__amount">{price.amount}</h2>}
+            {price && price.decimals > 0 && (
+              <h2 className="product__decimals">{price.decimals}</h2>
+            )}
           </div>
           <button className="product__button">Comprar</button>
         </div>
