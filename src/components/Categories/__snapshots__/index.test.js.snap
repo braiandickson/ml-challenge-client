@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#Categories Mounts the Categories component correctly with data 1`] = `
+<Categories
+  categories={
+    Array [
+      "Computación",
+      "Mouses, Teclados y Controles",
+      "Mouses",
+    ]
+  }
+>
+  <div
+    className="row full-width categories"
+  >
+    <div
+      className="row categorie"
+      key="Computación"
+    >
+      <span
+        className="categorie__name"
+      >
+        Computación
+      </span>
+    </div>
+    <div
+      className="row categorie"
+      key="Mouses, Teclados y Controles"
+    >
+      <img
+        alt="chevron icon"
+        className="categorie__chevron"
+        src="chevron.svg"
+      />
+      <span
+        className="categorie__name"
+      >
+        Mouses, Teclados y Controles
+      </span>
+    </div>
+    <div
+      className="row categorie"
+      key="Mouses"
+    >
+      <img
+        alt="chevron icon"
+        className="categorie__chevron"
+        src="chevron.svg"
+      />
+      <span
+        className="categorie__name"
+      >
+        Mouses
+      </span>
+    </div>
+  </div>
+</Categories>
+`;

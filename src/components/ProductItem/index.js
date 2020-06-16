@@ -32,7 +32,7 @@ ProductItem.defaultProps = {
     amount: 0,
     decimals: 0,
   },
-  condition: 'new',
+  condition: 'Nuevo',
   picture: '',
 };
 

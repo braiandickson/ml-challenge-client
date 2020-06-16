@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#SearchBar Mounts the SearchBar component correctly with data 1`] = `
+<SearchBar
+  handleSearch={[MockFunction]}
+>
+  <form
+    className="row middle full-width searchbar"
+    onSubmit={[Function]}
+  >
+    <input
+      className="searchbar__input"
+      name="query"
+      onChange={[Function]}
+      type="text"
+    />
+    <button
+      className="searchbar__button"
+      type="submit"
+    >
+      <img
+        alt="search-icon"
+        className="searchbar__icon"
+        src="searchIcon.svg"
+      />
+    </button>
+  </form>
+</SearchBar>
+`;
