@@ -1,23 +1,26 @@
 export const INITIAL_STATE = {
   categories: [],
   products: [],
-  productId: null,
   product: {},
 };
 
 export const reducer = (state, action) => {
   switch (action.type) {
     case 'SET_PRODUCTS': {
-      return { ...state, products: action.payload };
+      return {
+        ...state,
+        products: action.payload.items,
+        categories: action.payload.categories,
+      };
     }
     case 'RESET_PRODUCTS': {
       return { ...state, products: [] };
     }
-    case 'GET_PRODUCT_DETAIL': {
-      return { state: INITIAL_STATE };
+    case 'SET_PRODUCT_DETAIL': {
+      return { state, product: action.payload };
     }
     case 'RESET_PRODUCT_DETAIL': {
-      return { ...state, productId: null, product: {} };
+      return { ...state, product: {} };
     }
     default: {
       return state;
