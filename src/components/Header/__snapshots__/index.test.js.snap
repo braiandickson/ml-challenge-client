@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#Header Mounts the Header component correctly with data 1`] = `
+<Header>
+  <div
+    className="row center full-width header"
+  >
+    <div
+      className="row middle space-between header__container"
+    >
+      <button
+        className="header__button"
+        onClick={[Function]}
+        type="button"
+      >
+        <img
+          alt="logo"
+          className="header__logo"
+          src="logo.png"
+        />
+      </button>
+      <SearchBar
+        handleSearch={[Function]}
+      >
+        <form
+          className="row middle full-width searchbar"
+          onSubmit={[Function]}
+        >
+          <input
+            className="searchbar__input"
+            name="query"
+            onChange={[Function]}
+            type="text"
+          />
+          <button
+            className="searchbar__button"
+            type="submit"
+          >
+            <img
+              alt="search-icon"
+              className="searchbar__icon"
+              src="searchIcon.svg"
+            />
+          </button>
+        </form>
+      </SearchBar>
+    </div>
+  </div>
+</Header>
+`;

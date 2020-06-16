@@ -1,0 +1,356 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#ProductList Mounts the ProductList component correctly with data 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <ProductList
+      products={
+        Array [
+          Object {
+            "condition": "Nuevo",
+            "free_shipping": false,
+            "id": "MLA826445412",
+            "picture": "http://mla-s1-p.mlstatic.com/744481-MLA41024544993_032020-I.jpg",
+            "price": Object {
+              "amount": 449,
+              "currency": "$",
+              "decimals": 0,
+            },
+            "title": "Mouse Inalámbrico Recargable Negro Tedge",
+          },
+          Object {
+            "condition": "Nuevo",
+            "free_shipping": false,
+            "id": "MLA801490420",
+            "picture": "http://mla-s1-p.mlstatic.com/979762-MLA31493746282_072019-I.jpg",
+            "price": Object {
+              "amount": 195,
+              "currency": "$",
+              "decimals": 0,
+            },
+            "title": "Mini Mouse Optico Retráctil Usb M851 Neo",
+          },
+          Object {
+            "condition": "Nuevo",
+            "free_shipping": false,
+            "id": "MLA676896211",
+            "picture": "http://mla-s2-p.mlstatic.com/671210-MLA31138775834_062019-I.jpg",
+            "price": Object {
+              "amount": 470,
+              "currency": "$",
+              "decimals": 0,
+            },
+            "title": "Mouse Genius Dx-110 Usb 1000 Dpi Optico Negro",
+          },
+          Object {
+            "condition": "Nuevo",
+            "free_shipping": false,
+            "id": "MLA822593058",
+            "picture": "http://mla-s1-p.mlstatic.com/928384-MLA40720990763_022020-I.jpg",
+            "price": Object {
+              "amount": 1233,
+              "currency": "$",
+              "decimals": 91,
+            },
+            "title": "Mouse Gamer 3200dpi Personalizable Software - Gtia Gamer24hs",
+          },
+        ]
+      }
+    >
+      <ProductItem
+        condition="Nuevo"
+        free_shipping={false}
+        id="MLA826445412"
+        key="MLA826445412"
+        picture="http://mla-s1-p.mlstatic.com/744481-MLA41024544993_032020-I.jpg"
+        price={
+          Object {
+            "amount": 449,
+            "currency": "$",
+            "decimals": 0,
+          }
+        }
+        title="Mouse Inalámbrico Recargable Negro Tedge"
+      >
+        <Link
+          key="MLA826445412"
+          to="/items/MLA826445412"
+        >
+          <LinkAnchor
+            href="/items/MLA826445412"
+            navigate={[Function]}
+          >
+            <a
+              href="/items/MLA826445412"
+              onClick={[Function]}
+            >
+              <div
+                className="row middle product-item"
+              >
+                <img
+                  alt="Mouse Inalámbrico Recargable Negro Tedge"
+                  className="product-item__picture"
+                  src="http://mla-s1-p.mlstatic.com/744481-MLA41024544993_032020-I.jpg"
+                />
+                <div
+                  className="column product-item__information"
+                >
+                  <div
+                    className="row middle product-item__price-container"
+                  >
+                    <h2
+                      className="product-item__price"
+                    >
+                      $449
+                    </h2>
+                    <div
+                      className="product-item__status"
+                    />
+                  </div>
+                  <p
+                    className="product-item__title"
+                  >
+                    Mouse Inalámbrico Recargable Negro Tedge
+                  </p>
+                </div>
+                <div
+                  className="column"
+                >
+                  <span
+                    className="product-item__location"
+                  />
+                </div>
+              </div>
+            </a>
+          </LinkAnchor>
+        </Link>
+      </ProductItem>
+      <ProductItem
+        condition="Nuevo"
+        free_shipping={false}
+        id="MLA801490420"
+        key="MLA801490420"
+        picture="http://mla-s1-p.mlstatic.com/979762-MLA31493746282_072019-I.jpg"
+        price={
+          Object {
+            "amount": 195,
+            "currency": "$",
+            "decimals": 0,
+          }
+        }
+        title="Mini Mouse Optico Retráctil Usb M851 Neo"
+      >
+        <Link
+          key="MLA801490420"
+          to="/items/MLA801490420"
+        >
+          <LinkAnchor
+            href="/items/MLA801490420"
+            navigate={[Function]}
+          >
+            <a
+              href="/items/MLA801490420"
+              onClick={[Function]}
+            >
+              <div
+                className="row middle product-item"
+              >
+                <img
+                  alt="Mini Mouse Optico Retráctil Usb M851 Neo"
+                  className="product-item__picture"
+                  src="http://mla-s1-p.mlstatic.com/979762-MLA31493746282_072019-I.jpg"
+                />
+                <div
+                  className="column product-item__information"
+                >
+                  <div
+                    className="row middle product-item__price-container"
+                  >
+                    <h2
+                      className="product-item__price"
+                    >
+                      $195
+                    </h2>
+                    <div
+                      className="product-item__status"
+                    />
+                  </div>
+                  <p
+                    className="product-item__title"
+                  >
+                    Mini Mouse Optico Retráctil Usb M851 Neo
+                  </p>
+                </div>
+                <div
+                  className="column"
+                >
+                  <span
+                    className="product-item__location"
+                  />
+                </div>
+              </div>
+            </a>
+          </LinkAnchor>
+        </Link>
+      </ProductItem>
+      <ProductItem
+        condition="Nuevo"
+        free_shipping={false}
+        id="MLA676896211"
+        key="MLA676896211"
+        picture="http://mla-s2-p.mlstatic.com/671210-MLA31138775834_062019-I.jpg"
+        price={
+          Object {
+            "amount": 470,
+            "currency": "$",
+            "decimals": 0,
+          }
+        }
+        title="Mouse Genius Dx-110 Usb 1000 Dpi Optico Negro"
+      >
+        <Link
+          key="MLA676896211"
+          to="/items/MLA676896211"
+        >
+          <LinkAnchor
+            href="/items/MLA676896211"
+            navigate={[Function]}
+          >
+            <a
+              href="/items/MLA676896211"
+              onClick={[Function]}
+            >
+              <div
+                className="row middle product-item"
+              >
+                <img
+                  alt="Mouse Genius Dx-110 Usb 1000 Dpi Optico Negro"
+                  className="product-item__picture"
+                  src="http://mla-s2-p.mlstatic.com/671210-MLA31138775834_062019-I.jpg"
+                />
+                <div
+                  className="column product-item__information"
+                >
+                  <div
+                    className="row middle product-item__price-container"
+                  >
+                    <h2
+                      className="product-item__price"
+                    >
+                      $470
+                    </h2>
+                    <div
+                      className="product-item__status"
+                    />
+                  </div>
+                  <p
+                    className="product-item__title"
+                  >
+                    Mouse Genius Dx-110 Usb 1000 Dpi Optico Negro
+                  </p>
+                </div>
+                <div
+                  className="column"
+                >
+                  <span
+                    className="product-item__location"
+                  />
+                </div>
+              </div>
+            </a>
+          </LinkAnchor>
+        </Link>
+      </ProductItem>
+      <ProductItem
+        condition="Nuevo"
+        free_shipping={false}
+        id="MLA822593058"
+        key="MLA822593058"
+        picture="http://mla-s1-p.mlstatic.com/928384-MLA40720990763_022020-I.jpg"
+        price={
+          Object {
+            "amount": 1233,
+            "currency": "$",
+            "decimals": 91,
+          }
+        }
+        title="Mouse Gamer 3200dpi Personalizable Software - Gtia Gamer24hs"
+      >
+        <Link
+          key="MLA822593058"
+          to="/items/MLA822593058"
+        >
+          <LinkAnchor
+            href="/items/MLA822593058"
+            navigate={[Function]}
+          >
+            <a
+              href="/items/MLA822593058"
+              onClick={[Function]}
+            >
+              <div
+                className="row middle product-item"
+              >
+                <img
+                  alt="Mouse Gamer 3200dpi Personalizable Software - Gtia Gamer24hs"
+                  className="product-item__picture"
+                  src="http://mla-s1-p.mlstatic.com/928384-MLA40720990763_022020-I.jpg"
+                />
+                <div
+                  className="column product-item__information"
+                >
+                  <div
+                    className="row middle product-item__price-container"
+                  >
+                    <h2
+                      className="product-item__price"
+                    >
+                      $1233.91
+                    </h2>
+                    <div
+                      className="product-item__status"
+                    />
+                  </div>
+                  <p
+                    className="product-item__title"
+                  >
+                    Mouse Gamer 3200dpi Personalizable Software - Gtia Gamer24hs
+                  </p>
+                </div>
+                <div
+                  className="column"
+                >
+                  <span
+                    className="product-item__location"
+                  />
+                </div>
+              </div>
+            </a>
+          </LinkAnchor>
+        </Link>
+      </ProductItem>
+    </ProductList>
+  </Router>
+</BrowserRouter>
+`;

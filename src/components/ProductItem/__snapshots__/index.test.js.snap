@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#ProductItem Mounts the ProductItem component correctly with data 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <ProductItem
+      condition="Nuevo"
+      id="MLA826445412"
+      picture="http://mla-s1-p.mlstatic.com/744481-MLA41024544993_032020-I.jpg"
+      price={
+        Object {
+          "amount": 449,
+          "currency": "$",
+          "decimals": 0,
+        }
+      }
+      title="Mouse Inalámbrico Recargable Negro Tedge"
+    >
+      <Link
+        key="MLA826445412"
+        to="/items/MLA826445412"
+      >
+        <LinkAnchor
+          href="/items/MLA826445412"
+          navigate={[Function]}
+        >
+          <a
+            href="/items/MLA826445412"
+            onClick={[Function]}
+          >
+            <div
+              className="row middle product-item"
+            >
+              <img
+                alt="Mouse Inalámbrico Recargable Negro Tedge"
+                className="product-item__picture"
+                src="http://mla-s1-p.mlstatic.com/744481-MLA41024544993_032020-I.jpg"
+              />
+              <div
+                className="column product-item__information"
+              >
+                <div
+                  className="row middle product-item__price-container"
+                >
+                  <h2
+                    className="product-item__price"
+                  >
+                    $449
+                  </h2>
+                  <div
+                    className="product-item__status"
+                  />
+                </div>
+                <p
+                  className="product-item__title"
+                >
+                  Mouse Inalámbrico Recargable Negro Tedge
+                </p>
+              </div>
+              <div
+                className="column"
+              >
+                <span
+                  className="product-item__location"
+                />
+              </div>
+            </div>
+          </a>
+        </LinkAnchor>
+      </Link>
+    </ProductItem>
+  </Router>
+</BrowserRouter>
+`;
